@@ -727,3 +727,193 @@ button:focus-visible {
   }
 
 }
+
+
+/* ------------------------------
+   Private Area
+------------------------------ */
+
+.area-boundary {
+  padding: 24px 0;
+
+  background: var(--blue-light);
+
+  border-top: 2px dashed var(--blue);
+  border-bottom: 2px dashed var(--blue);
+}
+
+.area-boundary p {
+  margin: 4px 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+}
+
+.area-tag {
+  display: inline-block;
+
+  margin-right: 8px;
+  padding: 2px 12px;
+
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.area-tag-public {
+  background: var(--surface);
+
+  border: 1px solid var(--blue);
+
+  color: var(--blue-dark);
+}
+
+.area-tag-private {
+  background: var(--blue-dark);
+
+  color: #ffffff;
+}
+
+.private-section {
+  padding: 88px 0;
+
+  background: var(--surface);
+}
+
+.private-section h3 {
+  margin: 32px 0 12px;
+
+  font-size: 19px;
+  line-height: 1.45;
+}
+
+.private-note {
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+.auth-message {
+  min-height: 1.8em;
+
+  color: var(--blue-dark);
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.private-lead {
+  color: var(--muted);
+}
+
+.action-button {
+  padding: 10px 20px;
+
+  border: 0;
+  border-radius: 10px;
+
+  background: var(--blue-dark);
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.text-button {
+  padding: 0 4px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--blue-dark);
+
+  font-size: 14px;
+  font-weight: 750;
+
+  text-decoration: underline;
+}
+
+.text-button:disabled {
+  color: var(--muted);
+
+  cursor: not-allowed;
+
+  text-decoration: none;
+}
+
+.private-form {
+  max-width: 480px;
+}
+
+.private-form label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+.private-form input,
+.private-form textarea {
+  display: block;
+
+  width: 100%;
+
+  margin-top: 4px;
+  padding: 10px 12px;
+
+  border: 1px solid var(--line);
+  border-radius: 8px;
+
+  background: var(--bg);
+
+  color: var(--text);
+
+  font: inherit;
+}
+
+.private-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.private-item,
+.passkey-row {
+  margin-bottom: 10px;
+  padding: 14px 18px;
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  background: var(--bg);
+}
+
+.private-item p {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+
+  font-size: 15px;
+
+  white-space: pre-wrap;
+}
+
+.passkey-row {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.passkey-row small {
+  color: var(--muted);
+}

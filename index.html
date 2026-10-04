@@ -360,6 +360,102 @@
       </div>
     </section>
 
+    <!-- PUBLIC / PRIVATE BOUNDARY -->
+    <div class="area-boundary" role="separator" aria-label="공개 영역과 비공개 영역의 경계">
+      <div class="container">
+        <p>
+          <span class="area-tag area-tag-public">공개 영역</span>
+          위쪽은 누구나 볼 수 있습니다.
+        </p>
+        <p>
+          <span class="area-tag area-tag-private">비공개 영역</span>
+          아래쪽은 패스키로 잠겨 있으며, 로그인한 본인만 볼 수 있습니다.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- PRIVATE AREA -->
+    <section class="private-section" id="private">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">PRIVATE AREA</p>
+          <h2>나만의 자리</h2>
+        </div>
+
+        <p class="private-note">
+          이 영역에는 시험용으로 만든 예시 내용만 넣습니다.
+          실제 연락처나 신분증 번호 같은 개인정보는 입력하지 마세요.
+        </p>
+
+        <p class="auth-message" id="auth-message" role="status" aria-live="polite"></p>
+
+        <div id="logged-out">
+          <p class="private-lead">
+            패스키로 로그인하면 이 자리가 열립니다. 비밀번호는 사용하지 않습니다.
+          </p>
+
+          <button type="button" class="action-button" id="login-button">
+            패스키로 로그인
+          </button>
+
+          <form class="private-form" id="register-form">
+            <h3>새 계정 만들기</h3>
+            <label>
+              계정 이름
+              <input type="text" name="username" maxlength="40" required autocomplete="off">
+            </label>
+            <label>
+              패스키 이름
+              <input type="text" name="passkeyName" maxlength="40" required autocomplete="off">
+            </label>
+            <button type="submit" class="action-button">계정 만들고 패스키 등록</button>
+          </form>
+        </div>
+
+        <div id="logged-in" hidden>
+          <p class="private-lead">
+            <strong id="who"></strong> 계정으로 로그인 중입니다.
+            <button type="button" class="text-button" id="logout-button">로그아웃</button>
+          </p>
+
+          <h3>비공개 항목 <span id="item-count">0</span>개</h3>
+          <ul class="private-list" id="item-list"></ul>
+
+          <form class="private-form" id="item-form">
+            <h3>항목 추가</h3>
+            <label>
+              제목
+              <input type="text" name="title" maxlength="100" required autocomplete="off">
+            </label>
+            <label>
+              내용
+              <textarea name="body" maxlength="1000" rows="3" required></textarea>
+            </label>
+            <button type="submit" class="action-button">항목 추가</button>
+          </form>
+
+          <h3>등록된 패스키</h3>
+          <ul class="private-list" id="passkey-list"></ul>
+          <p class="private-note">
+            패스키가 하나만 남으면 삭제할 수 없습니다.
+            하나도 남지 않으면 이 계정으로 다시 들어올 방법이 없기 때문입니다.
+          </p>
+
+          <form class="private-form" id="add-passkey-form">
+            <h3>패스키 추가 등록</h3>
+            <label>
+              패스키 이름
+              <input type="text" name="passkeyName" maxlength="40" required autocomplete="off">
+            </label>
+            <button type="submit" class="action-button">패스키 추가</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
 
@@ -380,6 +476,7 @@
 
 
   <script src="script.js"></script>
+  <script src="passkey.js"></script>
 
 </body>
 </html>
